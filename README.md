@@ -9,7 +9,7 @@ The effectiveness of any one of the bank's security systems is attached a 'weigh
 
 ## Graph
 The graph below represents one particular bank in town that criminal mastermind gang SIJ were going after:
-![![Alternative Text](images/graph1.png)]
+![![Alternative Text](images/graph1.png)
 The nodes are different rooms or corridors in the bank and the edges doors between them, with the weights representing the number and complexity of digital security measures blocking access between the rooms.
 
 The highlighted edges here show where we'd cut the graph to for our technical remote team to knock-out as many security systems as possible, to enable our man on-the-ground to get to the vault on node 4.
@@ -21,7 +21,7 @@ We went down a big rabbit trail in the first half of the hackathon, trying to ad
 We used this classical algorithm to help verify the correctness in the quantum approach.
 
 We also plotted the graph to help us visually verify the results of the classical algorithm, e.g.:
-![![Alternative Text](images/graph2.png)]
+![![Alternative Text](images/graph2.png)
 
 ## Quantum Solution
 ### Approach
@@ -32,6 +32,6 @@ We also incorporated a condition to "discourage" partitionings where all the nod
 The full implementation can be found in `QHack2025.ipynb`. Take special note of the QUBO implementation adaptations / additional constraints in `graph_to_qubo` function (i.e. isolation penalty).
 
 For the QAOA algorithm results, we plotted the these on a histogram with 100000 shots. See the figure below (bitstrings not shown):
-![![Alternative Text](images/histogram.png)]
+![![Alternative Text](images/histogram.png)
 
 The results tended towards the correct answer though would often lead to ineligible partitions. In order to counteract this we implemented an isolation penalty that would apply a negative weighting to nodes with no edges. This addition decreased the number of ineligible cuts but did not otherwise increase the accuracy of the result of the model.
